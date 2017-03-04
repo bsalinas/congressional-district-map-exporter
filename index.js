@@ -9,7 +9,7 @@ var pathToTileMill = "/Applications/TileMill.app/Contents/Resources";
 //Should be absolute
 var pathToExportedImages = "~/images/tx_house2";
 var shpFileName = "data/tl_2016_48_sldl.shp";
-var dbfFileName = "data/tl_2016_48_sldl.shp";
+var dbfFileName = "data/tl_2016_48_sldl.dbf";
 
 var template = '#districts { \n\
 line-color:rgba(100,200,100,0.8);\n\
