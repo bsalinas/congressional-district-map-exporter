@@ -4,10 +4,12 @@ var bbox = require('geojson-bbox');
 var shapefile = require("shapefile");
 
 var tileMillProjectName = "CongressionalDistricts";
-var pathToMapStyleSheet = "/Users/ben/Documents/MapBox/project/"+tileMillProjectName+"/highlighted_district.mss";
+var pathToMapStyleSheet = "~/Documents/MapBox/project/"+tileMillProjectName+"/highlighted_district.mss";
 var pathToTileMill = "/Applications/TileMill.app/Contents/Resources";
 //Should be absolute
 var pathToExportedImages = "~/images/tx_house2";
+var shpFileName = "data/tl_2016_48_sldl.shp";
+var dbfFileName = "data/tl_2016_48_sldl.shp";
 
 var template = '#districts { \n\
 line-color:rgba(100,200,100,0.8);\n\
@@ -29,7 +31,7 @@ line-color:rgba(100,200,100,0.8);\n\
 }';
 var commandTemplate = "./index.js export {{PROJECT_NAME}} --bbox={{LAT_1}},{{LON_1}},{{LAT_2}},{{LON_2}} --format=png {{OUTPUT_PATH}}/district_{{DISTRICT_NUMBER}}.png";
 
-shapefile.read("data/tl_2016_48_sldl.shp","data/tl_2016_48_sldl.dbf").then(function(data){
+shapefile.read(shpFileName, dbfFileName).then(function(data){
     //This converts our shpfile into GeoJSON.
     //Grab the features.
     var features = data['features']
