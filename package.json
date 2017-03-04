@@ -1,0 +1,23 @@
+{
+  "name": "congressional-district-map-exporter",
+  "version": "0.1.0",
+  "description": "Semi-automation of exporting maps of congressional districts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsalinas/congressional-district-map-exporter.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bsalinas/congressional-district-map-exporter/issues"
+  },
+  "homepage": "https://github.com/bsalinas/congressional-district-map-exporter#readme",
+  "dependencies": {
+    "geojson-bbox": "0.0.0",
+    "shapefile": "^0.6.2"
+  }
+}
